@@ -91,3 +91,18 @@
 #ButtonSprint #ButtonImage {
     background-image: url("./Images/UI_Icon_Sprint.png#UI_Icon_Sprint");
 }
+
+#ButtonAttract {
+    width: 110px;
+    height: 110px;
+    
+    position: absolute;
+    
+    right : 45px;
+    bottom : 250px;
+}
+
+#ButtonAttract #ButtonImage {
+    background-image: url("./Images/UI_Icon_Jump.png#UI_Icon_Jump"); 
+    -unity-background-image-tint-color: rgb(255, 100, 100);
+}
