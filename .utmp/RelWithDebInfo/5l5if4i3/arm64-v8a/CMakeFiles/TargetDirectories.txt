@@ -1,0 +1,5 @@
+C:/0_Proje_Muhammed/UnityProjects/GGJ26/.utmp/RelWithDebInfo/5l5if4i3/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/0_Proje_Muhammed/UnityProjects/GGJ26/.utmp/RelWithDebInfo/5l5if4i3/arm64-v8a/CMakeFiles/rebuild_cache.dir
+C:/0_Proje_Muhammed/UnityProjects/GGJ26/.utmp/RelWithDebInfo/5l5if4i3/arm64-v8a/GameActivity/CMakeFiles/game.dir
+C:/0_Proje_Muhammed/UnityProjects/GGJ26/.utmp/RelWithDebInfo/5l5if4i3/arm64-v8a/GameActivity/CMakeFiles/edit_cache.dir
+C:/0_Proje_Muhammed/UnityProjects/GGJ26/.utmp/RelWithDebInfo/5l5if4i3/arm64-v8a/GameActivity/CMakeFiles/rebuild_cache.dir
