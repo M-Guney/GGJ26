@@ -23,17 +23,24 @@ public class MobileDisableAutoSwitchControls : MonoBehaviour
 
     void Start()
     {
+        if (playerInput == null)
+        {
+            playerInput = FindFirstObjectByType<PlayerInput>();
+        }
+        
         DisableAutoSwitchControls();
     }
 
     void DisableAutoSwitchControls()
     {
-        playerInput.neverAutoSwitchControlSchemes = true;
-    }
-
-    private void Update()
-    {
-        Debug.Log(playerInput.currentControlScheme);
+        if (playerInput != null)
+        {
+            playerInput.neverAutoSwitchControlSchemes = true;
+        }
+        else
+        {
+            Debug.LogError("MobileDisableAutoSwitchControls: PlayerInput is missing!");
+        }
     }
 
 #endif
