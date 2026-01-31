@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 
 public class MaskPickup : MonoBehaviour
@@ -8,6 +9,7 @@ public class MaskPickup : MonoBehaviour
     [Header("Pickup Settings")]
     [Tooltip("If true, the mask will be picked up automatically when player enters trigger. If false, requires attract button press.")]
     [SerializeField] private bool _pickupOnTrigger = false;
+    [SerializeField] private CollectableMove _collectableMove;
     
     private bool _isPickedUp = false;
     private float _lastInteractionTime;
@@ -41,6 +43,7 @@ public class MaskPickup : MonoBehaviour
         // If we are not picked up, and we hit something that isn't the player (like the ground)
         if (!_isPickedUp && !collision.gameObject.CompareTag("Player"))
         {
+          
             // Restore "Floating" state (Non-Kinematic, No Gravity) matches initial state
             Rigidbody rb = GetComponent<Rigidbody>();
             if (rb != null) 
@@ -110,6 +113,8 @@ public class MaskPickup : MonoBehaviour
         
         if (_maskRoot != null)
         {
+            _collectableMove.animated = false;
+            
             Debug.Log($"Attempting to parent mask to: {_maskRoot.name}");
             
             _currentInput = input;
@@ -137,9 +142,11 @@ public class MaskPickup : MonoBehaviour
             Debug.Log($"Mask parented! Parent is now: {transform.parent?.name ?? "NULL"}");
 
             // Reset local position and rotation
-            transform.localPosition = Vector3.zero;
-            transform.localRotation = Quaternion.identity;
-
+            //transform.localPosition = Vector3.zero;
+            //transform.localRotation = Quaternion.identity;
+            transform.DOLocalJump(Vector3.zero, 1.25f, 0, 2).SetEase(Ease.InOutSine);
+            transform.DOLocalRotate(Vector3.zero, 2).SetEase(Ease.InOutSine);
+            transform.DOScale(Vector3.one * 2.75f, 2).SetEase(Ease.InOutSine); ;
             Debug.Log("Mask picked up successfully!");
         }
         else
