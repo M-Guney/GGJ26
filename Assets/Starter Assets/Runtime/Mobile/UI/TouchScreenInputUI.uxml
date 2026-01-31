@@ -21,5 +21,8 @@
         <ui:VisualElement name="ButtonSprint" class="touchscreen-button">
             <ui:VisualElement name="ButtonImage" class="button-icon" style="flex-grow: 1;" />
         </ui:VisualElement>
+        <ui:VisualElement name="ButtonAttract" class="touchscreen-button">
+            <ui:VisualElement name="ButtonImage" class="button-icon" style="flex-grow: 1;" />
+        </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>
