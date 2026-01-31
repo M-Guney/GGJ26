@@ -5,6 +5,10 @@ public class MaskPickup : MonoBehaviour
     [Tooltip("The Transform on the player where the mask should attach.")]
     [SerializeField] private Transform _maskRoot;
     
+    [Header("Pickup Settings")]
+    [Tooltip("If true, the mask will be picked up automatically when player enters trigger. If false, requires attract button press.")]
+    [SerializeField] private bool _pickupOnTrigger = false;
+    
     private bool _isPickedUp = false;
     private float _lastInteractionTime;
     private const float COOLDOWN = 1.0f;
@@ -78,9 +82,18 @@ public class MaskPickup : MonoBehaviour
         {
             var input = other.GetComponent<StarterAssets.StarterAssetsInputs>();
             
-            Debug.Log($"TryPickup: Touched by Player. Input found: {input != null}, Attract active: {input?.attract}");
+            if (input == null)
+            {
+                Debug.LogWarning("Player doesn't have StarterAssetsInputs component!");
+                return;
+            }
+            
+            // Check if we should pickup based on settings
+            bool shouldPickup = _pickupOnTrigger || input.attract;
+            
+            Debug.Log($"TryPickup: Player detected. PickupOnTrigger: {_pickupOnTrigger}, Attract: {input.attract}, ShouldPickup: {shouldPickup}");
 
-            if (input != null && input.attract)
+            if (shouldPickup)
             {
                 PickUp(input);
             }

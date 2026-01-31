@@ -1345,6 +1345,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maskRoot: {fileID: 1572345680}
+  _pickupOnTrigger: 1
 --- !u!54 &667941169
 Rigidbody:
   m_ObjectHideFlags: 0
