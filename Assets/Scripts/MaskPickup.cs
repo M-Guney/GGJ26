@@ -62,27 +62,43 @@ public class MaskPickup : MonoBehaviour
 
     private void TryPickup(GameObject other)
     {
-        if (_isPickedUp) return;
-        if (Time.time < _lastInteractionTime + COOLDOWN) return;
+        if (_isPickedUp)
+        {
+            Debug.Log("TryPickup: Already picked up, skipping.");
+            return;
+        }
+        
+        if (Time.time < _lastInteractionTime + COOLDOWN)
+        {
+            Debug.Log($"TryPickup: Cooldown active. Time remaining: {(_lastInteractionTime + COOLDOWN - Time.time):F2}s");
+            return;
+        }
 
         if (other.CompareTag("Player"))
         {
             var input = other.GetComponent<StarterAssets.StarterAssetsInputs>();
             
-            // Debugging re-pickup
-            // Debug.Log($"TryPickup: Touched by Player. Attract Input: {input?.attract}");
+            Debug.Log($"TryPickup: Touched by Player. Input found: {input != null}, Attract active: {input?.attract}");
 
             if (input != null && input.attract)
             {
                 PickUp(input);
             }
         }
+        else
+        {
+            Debug.Log($"TryPickup: Object '{other.name}' is not tagged as Player. Tag: '{other.tag}'");
+        }
     }
 
     private void PickUp(StarterAssets.StarterAssetsInputs input)
     {
+        Debug.Log($"PickUp called. _maskRoot assigned: {_maskRoot != null}");
+        
         if (_maskRoot != null)
         {
+            Debug.Log($"Attempting to parent mask to: {_maskRoot.name}");
+            
             _currentInput = input;
             _isPickedUp = true;
             _lastInteractionTime = Time.time;
@@ -105,16 +121,17 @@ public class MaskPickup : MonoBehaviour
 
             // Parent to the Mask-Root
             transform.SetParent(_maskRoot);
+            Debug.Log($"Mask parented! Parent is now: {transform.parent?.name ?? "NULL"}");
 
             // Reset local position and rotation
             transform.localPosition = Vector3.zero;
             transform.localRotation = Quaternion.identity;
 
-            Debug.Log("Mask picked up!");
+            Debug.Log("Mask picked up successfully!");
         }
         else
         {
-            Debug.LogError("Mask-Root is not assigned in the inspector!");
+            Debug.LogError("Mask-Root is not assigned in the inspector! Please assign it in the MaskPickup component.");
         }
     }
 
