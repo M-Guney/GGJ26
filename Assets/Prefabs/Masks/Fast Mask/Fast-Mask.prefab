@@ -54,10 +54,33 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 514cb6782feff8248a1065f53665b420, type: 2}
     - target: {fileID: 919132149155446097, guid: 6b78a9ee6f43e844bbaace26c49714da, type: 3}
       propertyPath: m_Name
-      value: Mask_low
+      value: Fast-Mask
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6b78a9ee6f43e844bbaace26c49714da, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3666391513954004798}
   m_SourcePrefab: {fileID: 100100000, guid: 6b78a9ee6f43e844bbaace26c49714da, type: 3}
+--- !u!1 &4314933715611325038 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6b78a9ee6f43e844bbaace26c49714da, type: 3}
+  m_PrefabInstance: {fileID: 3972404169718083391}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3666391513954004798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4314933715611325038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d06f0af5e143a2e41a40be3ec97a11b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  donmeHizi: 50
+  suzulmeHizi: 1.5
+  suzulmeMiktari: 0.3
