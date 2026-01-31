@@ -20,6 +20,11 @@ public class TouchscreenInput : MonoBehaviour
     public UnityEvent<Vector2> LookEvent;
     public UnityEvent<bool> JumpEvent;
     public UnityEvent<bool> SprintEvent;
+    public UnityEvent<bool> AttractEvent;
+    
+    [Header("References")]
+    [Tooltip("If set, this script will automatically bind events to this input component")]
+    public StarterAssets.StarterAssetsInputs starterAssetsInputs;
     
     private UIDocument m_Document;
 
@@ -43,6 +48,10 @@ public class TouchscreenInput : MonoBehaviour
 
     private void Start()
     {
+        // Auto-find input if missing
+        if (starterAssetsInputs == null)
+            starterAssetsInputs = FindFirstObjectByType<StarterAssets.StarterAssetsInputs>();
+
         var joystickMove = m_Document.rootVisualElement.Q<VisualElement>("JoystickMove");
         var joystickLook = m_Document.rootVisualElement.Q<VisualElement>("JoystickLook");
         
@@ -68,6 +77,23 @@ public class TouchscreenInput : MonoBehaviour
         var sprintButton = m_Document.rootVisualElement.Q<VisualElement>("ButtonSprint");
         sprintButton.RegisterCallback<PointerEnterEvent>(evt => { SprintEvent.Invoke(true); });
         sprintButton.RegisterCallback<PointerLeaveEvent>(evt => { SprintEvent.Invoke(false); });
+        
+        var attractButton = m_Document.rootVisualElement.Q<VisualElement>("ButtonAttract");
+        if (attractButton != null)
+        {
+            attractButton.RegisterCallback<PointerDownEvent>(evt => { AttractEvent.Invoke(true); });
+            attractButton.RegisterCallback<PointerUpEvent>(evt => { AttractEvent.Invoke(false); });
+        }
+        
+        // Auto-binding
+        if (starterAssetsInputs != null)
+        {
+            MoveEvent.AddListener(starterAssetsInputs.MoveInput);
+            LookEvent.AddListener(starterAssetsInputs.LookInput);
+            JumpEvent.AddListener(starterAssetsInputs.JumpInput);
+            SprintEvent.AddListener(starterAssetsInputs.SprintInput);
+            AttractEvent.AddListener(starterAssetsInputs.AttractInput);
+        }
     }
 }
 public class VirtualJoystick
