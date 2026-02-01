@@ -15,4 +15,8 @@ public class MaskData : ScriptableObject
     
     [Tooltip("Prefab for visual representation when equipped")]
     public GameObject prefab;
+
+    [Header("Ability")]
+    [Tooltip("The ability granted by this mask.")]
+    public GGJ26.Abilities.MaskAbility ability;
 }
