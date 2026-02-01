@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 using DG.Tweening; // Logic requires DOTween
 #if ENABLE_INPUT_SYSTEM
 using UnityEngine.InputSystem;
@@ -31,6 +32,12 @@ public class MaskSelector : MonoBehaviour
     [SerializeField] private Vector3 _targetScale = Vector3.one;
     [SerializeField] private float _scaleDuration = 0.5f;
 
+    [Header("Feedback")]
+    [SerializeField] private MaskInventoryUI _ui;
+    [SerializeField] private Transform _cameraShakeTarget;
+    [SerializeField] private float _shakeIntensity = 0.5f;
+    [SerializeField] private float _shakeDuration = 0.3f;
+
     private int _currentIndex = -1;
     private GameObject _currentMaskObject;
     private MaskData _currentMaskData;
@@ -39,8 +46,15 @@ public class MaskSelector : MonoBehaviour
 
     private void Start()
     {
-        if (_inventory == null)
-            _inventory = GetComponent<MaskInventory>();
+        if (_inventory == null) _inventory = GetComponent<MaskInventory>();
+        if (_ui == null) _ui = FindObjectOfType<MaskInventoryUI>(); // Auto-find UI
+
+        // Try to find default camera target if not assigned (specific for StarterAssets)
+        if (_cameraShakeTarget == null)
+        {
+            var tpc = GetComponent<StarterAssets.ThirdPersonController>();
+            if (tpc != null) _cameraShakeTarget = tpc.CinemachineCameraTarget.transform;
+        }
 
         if (_inventory != null)
         {
@@ -94,6 +108,50 @@ public class MaskSelector : MonoBehaviour
         if (scroll > 0) ScrollSlot(-1);
         if (scroll < 0) ScrollSlot(1);
 #endif
+
+        // Ability Trigger
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            TryActivateAbility();
+        }
+    }
+
+
+
+    private Dictionary<GGJ26.Abilities.MaskAbility, float> _nextAbilityUsageTime = new Dictionary<GGJ26.Abilities.MaskAbility, float>();
+
+    private void TryActivateAbility()
+    {
+        if (_currentMaskData == null || _currentMaskData.ability == null) return;
+
+        var ability = _currentMaskData.ability;
+
+        // Check Cooldown
+        if (_nextAbilityUsageTime.TryGetValue(ability, out float nextReadyTime))
+        {
+            if (Time.time < nextReadyTime)
+            {
+                Debug.Log($"Ability '{ability.name}' on cooldown. Ready in {nextReadyTime - Time.time:F1}s");
+                
+                // Feedback
+                if (_ui != null) _ui.ShowCooldownFeedback(_currentIndex);
+                if (_cameraShakeTarget != null)
+                {
+                    _cameraShakeTarget.DOShakePosition(_shakeDuration, _shakeIntensity);
+                }
+
+                return;
+            }
+        }
+
+        // Activate
+        ability.Activate(gameObject);
+        
+        // Set Cooldown
+        if (ability.cooldown > 0)
+        {
+            _nextAbilityUsageTime[ability] = Time.time + ability.cooldown;
+        }
     }
 
     private void ScrollSlot(int direction)
