@@ -15,6 +15,19 @@ public class MaskInventorySlot : MonoBehaviour
     {
         if (selectionHighlight != null)
             selectionHighlight.SetActive(isSelected);
+
+        // Swap icon if we have a mask and a selected variation
+        if (_currentMask != null && iconImage != null)
+        {
+            if (isSelected && _currentMask.selectedIcon != null)
+            {
+                iconImage.sprite = _currentMask.selectedIcon;
+            }
+            else
+            {
+                iconImage.sprite = _currentMask.icon;
+            }
+        }
     }
 
     public void SetMask(MaskData mask)
