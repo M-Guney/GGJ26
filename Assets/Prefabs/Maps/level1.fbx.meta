@@ -1,0 +1,337 @@
+fileFormatVersion: 2
+guid: 4e09bf60b90e8e34eb46314d7f4c7e5d
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 01___Default_1002
+    second: {fileID: 2100000, guid: f43fbca3d22bfd240badce80b508fb5a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Androecium-1.003
+    second: {fileID: 2100000, guid: a7846da39bd03ae4092290e4426a5786, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DT_Material_1
+    second: {fileID: 2100000, guid: 57b2d1379ae6fcd48a789859cfba4e55, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Flower-1.003
+    second: {fileID: 2100000, guid: fe396acc8c0f55a4a8345f53b4c3da87, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Grass
+    second: {fileID: 2100000, guid: 8ff636493b1c4a343bde5b2b1767b426, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Grass.001
+    second: {fileID: 2100000, guid: 23fa871317029284fb83239c78b3ecfe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Grass.002
+    second: {fileID: 2100000, guid: bed0d9eaa64d21546a82899a27739a2d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hat
+    second: {fileID: 2100000, guid: 44e453e73c45c654594ae2238e713667, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HumanSkull_PBR
+    second: {fileID: 2100000, guid: 61cbe4a3d91fae14a981c176591cff0a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Leaf Blade-1.003
+    second: {fileID: 2100000, guid: 20e140b6f5147b441a828def3448363f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Leaf Blade-1.004
+    second: {fileID: 2100000, guid: 1caeab26200a33f4388bd605eae556e6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Leaf Blade-2.003
+    second: {fileID: 2100000, guid: 2706646b6e00e0b4eb61df8cb85fb520, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Leaf Blade-2.004
+    second: {fileID: 2100000, guid: 640d990371f520343b4b4bd3111495a8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Leaf Blade-2.005
+    second: {fileID: 2100000, guid: 5754867abeaac02428e8fee467cf1384, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Leaf Blade-2.006
+    second: {fileID: 2100000, guid: b56d71c67a40f7241ad9140f69ef7df5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Leaf Blade-2.007
+    second: {fileID: 2100000, guid: 3d522c8d378b1d64aa91de39b0fe756c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Leaf Blade-2.008
+    second: {fileID: 2100000, guid: e35ac8233b1080746b4cc5eccbe0b890, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.025
+    second: {fileID: 2100000, guid: ade2ee81ea407d54aa4c335ce3972c3a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Old wood.001
+    second: {fileID: 2100000, guid: d25d61f6b51e31047b517b4cd6d42e6e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Planks_SHD
+    second: {fileID: 2100000, guid: 261f547225a717a49a59b65f2d6ec032, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RocksStylized_M
+    second: {fileID: 2100000, guid: 61bec24a4ccfc99458f56db0c20b617d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Soil Ground.001
+    second: {fileID: 2100000, guid: 2e27b5125a4a6b34cbd53545150e59e1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Squamish_Crag_june2823_Full_u1_v1
+    second: {fileID: 2100000, guid: 94fca6a2d8d41794b8f02fcb7c130d79, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 01___Default_1001_normal
+    second: {fileID: 2800000, guid: ea09711c7dbf1624f9b61e0926ec84fb, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 01___Default_1002_baseColor
+    second: {fileID: 2800000, guid: de505b16ce5b3d8489f83377d05aa627, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 01___Default_1002_normal
+    second: {fileID: 2800000, guid: 897760582961ac045930b73a7a82e533, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Hat_Base_Color
+    second: {fileID: 2800000, guid: 672d296b59a1d1e4eb1d5e8b16a7a714, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Hat_Metallic
+    second: {fileID: 2800000, guid: e728afbd4a8da744384d5c910c490d24, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Hat_Roughness
+    second: {fileID: 2800000, guid: 555e27ef3f82359469bc1d55921d6dc6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ML_HumanSkull_Diffuse
+    second: {fileID: 2800000, guid: 28e229159fc2e02419c76f943e3583ae, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ML_HumanSkull_Normal
+    second: {fileID: 2800000, guid: 07e0830ef34dc60408dfc79194a39841, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ML_HumanSkull_Roughness
+    second: {fileID: 2800000, guid: 24f6bb94fe55ce24bb9d4e01d11489f7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PX_Soil_Ground_26_albedo
+    second: {fileID: 2800000, guid: e1d905f696dad1b4b9159e0eb7030ef4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PX_Soil_Ground_26_normal
+    second: {fileID: 2800000, guid: 5198044ef164c954cb8e1374a956fa5f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PX_Soil_Ground_26_roughness
+    second: {fileID: 2800000, guid: 272911adee9888c47a67f34b5cee5d91, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Planks_Diff
+    second: {fileID: 2800000, guid: f55f980c9b1ae3c4e8b415a32e63db3b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Planks_Norm
+    second: {fileID: 2800000, guid: a1b4eeabda6ab5e48b20e83042548929, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Planks_Rough
+    second: {fileID: 2800000, guid: 556ed0862cde0804ab2e389351d67785, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Rocks_Stylized_Color
+    second: {fileID: 2800000, guid: b93b9914ed449c147b0c5ac8c1bd1f3d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Squamish_Crag_june2823_Full_u1_v1_diffuse
+    second: {fileID: 2800000, guid: 6d89b879d49e1354e854b844f2182216, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Squamish_Crag_june2823_Full_u1_v1_diffuse000
+    second: {fileID: 2800000, guid: a612518b37ad95f4aaee962a55520c35, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Squamish_Crag_june2823_Full_u1_v1_normal
+    second: {fileID: 2800000, guid: 2601b2b4014d043418ed2b1c89d44241, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: radyobase
+    second: {fileID: 2800000, guid: 07a5e58afd333764c9af0b09efd60212, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: wood08_diffuse
+    second: {fileID: 2800000, guid: a994a2875a2c7f64393d537a938241cf, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: wood08_normal_opengl
+    second: {fileID: 2800000, guid: b96eb075e11e3d3478e8f473e27c73ba, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: wood08_specular
+    second: {fileID: 2800000, guid: 7e99b013a7caf7d4db8009e79fcb578d, type: 3}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 0
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 0
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
