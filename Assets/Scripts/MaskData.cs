@@ -12,6 +12,9 @@ public class MaskData : ScriptableObject
     
     [Tooltip("Icon for UI display")]
     public Sprite icon;
+
+    [Tooltip("Icon to display when this mask is selected")]
+    public Sprite selectedIcon;
     
     [Tooltip("Prefab for visual representation when equipped")]
     public GameObject prefab;
