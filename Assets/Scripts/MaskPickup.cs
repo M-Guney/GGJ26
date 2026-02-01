@@ -13,6 +13,7 @@ public class MaskPickup : MonoBehaviour
     [SerializeField] private CollectableMove _collectableMove; // kept for reference/movement if needed
     
     private float _lastInteractionTime;
+    private bool _isPickedUp = false; // Prevent multiple adds before Destroy
     private const float COOLDOWN = 1.0f;
 
     private void Start()
@@ -37,6 +38,7 @@ public class MaskPickup : MonoBehaviour
 
     private void TryPickup(GameObject other)
     {
+        if (_isPickedUp) return;
         if (Time.time < _lastInteractionTime + COOLDOWN)
             return;
 
@@ -69,6 +71,7 @@ public class MaskPickup : MonoBehaviour
             // Try adding to inventory
             if (inventory.TryAddMask(_maskData))
             {
+                _isPickedUp = true;
                 Debug.Log($"MaskPickup: Collected {_maskData.maskName}");
                 
                 // Optional: Spawn collection effect here

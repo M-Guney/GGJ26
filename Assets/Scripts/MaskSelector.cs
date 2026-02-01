@@ -226,15 +226,28 @@ public class MaskSelector : MonoBehaviour
         _currentMaskObject.transform.localScale = Vector3.one;
 
         // Important: Disable collider/physics on expected mask if it has them
-        var rb = _currentMaskObject.GetComponent<Rigidbody>();
-        if (rb) Destroy(rb);
+        // We MUST disable them immediately, and check CHILDREN too (common in prefabs)
+        var rbs = _currentMaskObject.GetComponentsInChildren<Rigidbody>();
+        foreach (var rb in rbs)
+        {
+            rb.isKinematic = true;
+            Destroy(rb);
+        }
         
-        var col = _currentMaskObject.GetComponent<Collider>();
-        if (col) Destroy(col);
+        var cols = _currentMaskObject.GetComponentsInChildren<Collider>();
+        foreach (var col in cols)
+        {
+            col.enabled = false; // Immediate disable
+            Destroy(col);
+        }
         
         // Should also remove pickup scripts to prevent self-pickup
-        var pickup = _currentMaskObject.GetComponent<MaskPickup>();
-        if (pickup) Destroy(pickup);
+        var pickups = _currentMaskObject.GetComponentsInChildren<MaskPickup>();
+        foreach (var pickup in pickups)
+        {
+            pickup.enabled = false; // Immediate stop
+            Destroy(pickup);
+        }
 
         Debug.Log($"MaskSelector: Equipped '{maskData.maskName}'");
 
