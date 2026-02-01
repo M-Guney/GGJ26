@@ -41,6 +41,13 @@ public class MaskInventory : MonoBehaviour
             Debug.LogWarning("MaskInventory: Attempted to add null mask");
             return false;
         }
+
+        // Check for duplicates
+        if (HasMask(mask))
+        {
+            Debug.Log($"MaskInventory: Already have '{mask.maskName}'. Cannot collect duplicate.");
+            return false;
+        }
         
         if (IsFull)
         {
