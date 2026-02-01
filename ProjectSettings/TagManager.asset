@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CinemachineTarget
   - Mask
+  - Default
   layers:
   - Default
   - TransparentFX

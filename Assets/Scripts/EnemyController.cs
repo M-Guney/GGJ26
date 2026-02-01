@@ -31,9 +31,20 @@ public class EnemyController : MonoBehaviour
     void Update()
     {
         // Player yok edilirse (null olursa) hata vermemesi için kontrol ediyoruz
+        // Check if target exists AND is still tagged "Player" (for Ghost ability support)
         if (playerTarget != null)
         {
-            agent.SetDestination(playerTarget.position);
+            if (playerTarget.CompareTag("Player"))
+            {
+                agent.isStopped = false; // Ensure moving
+                agent.SetDestination(playerTarget.position);
+            }
+            else
+            {
+                // Target exists but is hiding (Ghost Mode)
+                agent.isStopped = true; // Stop moving
+                agent.ResetPath(); // Clear path so it doesn't drift
+            }
         }
         
         // Update animation speed based on NavMeshAgent velocity

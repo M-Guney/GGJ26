@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maskName: Ghost Mask
   icon: {fileID: 0}
-  prefab: {fileID: 0}
+  prefab: {fileID: 8641651726340239066, guid: 9a9303ce2db687843b98aa3d5907bf52, type: 3}
+  ability: {fileID: 11400000, guid: 2f5fedf5e40ebd4478d9e24da459be1f, type: 2}
