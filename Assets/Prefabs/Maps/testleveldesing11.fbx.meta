@@ -98,52 +98,52 @@ ModelImporter:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: 01___Default_1001_normal
-    second: {fileID: 2800000, guid: fd6d2b37da4ed1d43b5445a47ebb6f78, type: 3}
+    second: {fileID: 2800000, guid: 7ae7b6aa7017a1a41a920872eecfa827, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: 01___Default_1002_baseColor
-    second: {fileID: 2800000, guid: 2d9f10ad1323b30479c8eb7c660ffbab, type: 3}
+    second: {fileID: 2800000, guid: 6a47103b9e3d7614ab1074f72c1d4aa1, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: 01___Default_1002_normal
-    second: {fileID: 2800000, guid: 8cf0c791ddb44d345b63cb0c301fbc6c, type: 3}
+    second: {fileID: 2800000, guid: 442e2a3afa92a4d4d96d376fb11084bb, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Hat_Base_Color
-    second: {fileID: 2800000, guid: b65778b27b1f830429608d68eef1814b, type: 3}
+    second: {fileID: 2800000, guid: a3e6499881a9f4e45a9ca379d6400a20, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Hat_Metallic
-    second: {fileID: 2800000, guid: 33a177c5e88fa644ea4df9b62ce2a4a2, type: 3}
+    second: {fileID: 2800000, guid: c62d883929bd12244988e3bb2927eb39, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Hat_Roughness
-    second: {fileID: 2800000, guid: b9e03a92635da3e46861c4b228f8b227, type: 3}
+    second: {fileID: 2800000, guid: 3a08ec7b2ae792f459cfe1b47ff03e10, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: PX_Soil_Ground_26_albedo
-    second: {fileID: 2800000, guid: c9c5806fb4279c6479c7222e386ed815, type: 3}
+    second: {fileID: 2800000, guid: d7bb29d7f11e0dd4fa58f45bd2938505, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: PX_Soil_Ground_26_normal
-    second: {fileID: 2800000, guid: 1282c6b1a50fcf44aaa459e22b87fc02, type: 3}
+    second: {fileID: 2800000, guid: 85301072c6329594188572b70246f08b, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: PX_Soil_Ground_26_roughness
-    second: {fileID: 2800000, guid: ddac3be0bd4489b4ca4cec1b47e8afef, type: 3}
+    second: {fileID: 2800000, guid: 193af712a93857f449b8bb34f9f70b1e, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: radyobase
-    second: {fileID: 2800000, guid: 20652cc48c5060a4f952e24fb41c8c85, type: 3}
+    second: {fileID: 2800000, guid: 740fabbe70cb5ba4eace416c3580fcd5, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -173,7 +173,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 4
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -228,7 +228,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 0.04
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 1

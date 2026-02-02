@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46bb00e7ad9c36748a06f9c681dd39b1, type: 3}
+  m_Name: Ghost-Mask
+  m_EditorClassIdentifier: 
+  maskName: Ghost Mask
+  icon: {fileID: 0}
+  prefab: {fileID: 8641651726340239066, guid: 9a9303ce2db687843b98aa3d5907bf52, type: 3}
+  ability: {fileID: 11400000, guid: 2f5fedf5e40ebd4478d9e24da459be1f, type: 2}

@@ -3,63 +3,32 @@ using UnityEngine;
 
 public class MaskPickup : MonoBehaviour
 {
-    [Tooltip("The Transform on the player where the mask should attach.")]
-    [SerializeField] private Transform _maskRoot;
+    [Header("Inventory Data")]
+    [Tooltip("The MaskData associated with this pickup.")]
+    [SerializeField] private MaskData _maskData;
     
     [Header("Pickup Settings")]
     [Tooltip("If true, the mask will be picked up automatically when player enters trigger. If false, requires attract button press.")]
     [SerializeField] private bool _pickupOnTrigger = false;
-    [SerializeField] private CollectableMove _collectableMove;
+    [SerializeField] private CollectableMove _collectableMove; // kept for reference/movement if needed
     
-    private bool _isPickedUp = false;
     private float _lastInteractionTime;
+    private bool _isPickedUp = false; // Prevent multiple adds before Destroy
     private const float COOLDOWN = 1.0f;
-    private StarterAssets.StarterAssetsInputs _currentInput;
-    private Vector3 _initialScale;
 
     private void Start()
     {
-        _initialScale = transform.localScale;
+        // _initialScale not needed if we destroy on pickup
     }
 
     private void Update()
     {
-        if (_isPickedUp && _currentInput != null)
-        {
-            if (_currentInput.attract && Time.time > _lastInteractionTime + COOLDOWN)
-            {
-                Drop();
-            }
-        }
+        // Drop logic removed as it is now handled by Inventory UI/System
     }
 
     private void OnTriggerStay(Collider other)
     {
         TryPickup(other.gameObject);
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        // If we are not picked up, and we hit something that isn't the player (like the ground)
-        if (!_isPickedUp && !collision.gameObject.CompareTag("Player"))
-        {
-          
-            // Restore "Floating" state (Non-Kinematic, No Gravity) matches initial state
-            Rigidbody rb = GetComponent<Rigidbody>();
-            if (rb != null) 
-            {
-                rb.isKinematic = false;
-                rb.useGravity = false;
-                rb.linearVelocity = Vector3.zero; // Stop moving
-                rb.angularVelocity = Vector3.zero;
-            }
-
-            // Turn on trigger
-            Collider col = GetComponent<Collider>();
-            if (col != null) col.isTrigger = true;
-            
-            Debug.Log("Mask landed: Restored 'Floating' Trigger mode.");
-        }
     }
 
     private void OnCollisionStay(Collision collision)
@@ -69,118 +38,56 @@ public class MaskPickup : MonoBehaviour
 
     private void TryPickup(GameObject other)
     {
-        if (_isPickedUp)
-        {
-            Debug.Log("TryPickup: Already picked up, skipping.");
-            return;
-        }
-        
+        if (_isPickedUp) return;
         if (Time.time < _lastInteractionTime + COOLDOWN)
-        {
-            Debug.Log($"TryPickup: Cooldown active. Time remaining: {(_lastInteractionTime + COOLDOWN - Time.time):F2}s");
             return;
-        }
 
         if (other.CompareTag("Player"))
         {
             var input = other.GetComponent<StarterAssets.StarterAssetsInputs>();
             
-            if (input == null)
-            {
-                Debug.LogWarning("Player doesn't have StarterAssetsInputs component!");
-                return;
-            }
+            // Check pickup conditions
+            bool pickupInput = input != null && input.attract;
+            bool shouldPickup = _pickupOnTrigger || pickupInput;
             
-            // Check if we should pickup based on settings
-            bool shouldPickup = _pickupOnTrigger || input.attract;
-            
-            Debug.Log($"TryPickup: Player detected. PickupOnTrigger: {_pickupOnTrigger}, Attract: {input.attract}, ShouldPickup: {shouldPickup}");
-
             if (shouldPickup)
             {
-                PickUp(input);
+                AttemptAddToInventory(other);
+            }
+        }
+    }
+
+    private void AttemptAddToInventory(GameObject player)
+    {
+        if (_maskData == null)
+        {
+            Debug.LogError($"MaskPickup: No MaskData assigned to {gameObject.name}");
+            return;
+        }
+
+        var inventory = player.GetComponent<MaskInventory>();
+        if (inventory != null)
+        {
+            // Try adding to inventory
+            if (inventory.TryAddMask(_maskData))
+            {
+                _isPickedUp = true;
+                Debug.Log($"MaskPickup: Collected {_maskData.maskName}");
+                
+                // Optional: Spawn collection effect here
+                
+                // Destroy the world object
+                Destroy(gameObject);
+            }
+            else
+            {
+                Debug.Log("MaskPickup: Inventory Full!");
+                _lastInteractionTime = Time.time; // Add cooldown so we don't spam logs
             }
         }
         else
         {
-            Debug.Log($"TryPickup: Object '{other.name}' is not tagged as Player. Tag: '{other.tag}'");
+            Debug.LogError("MaskPickup: Player has no MaskInventory component!");
         }
-    }
-
-    private void PickUp(StarterAssets.StarterAssetsInputs input)
-    {
-        Debug.Log($"PickUp called. _maskRoot assigned: {_maskRoot != null}");
-        
-        if (_maskRoot != null)
-        {
-            _collectableMove.animated = false;
-            
-            Debug.Log($"Attempting to parent mask to: {_maskRoot.name}");
-            
-            _currentInput = input;
-            _isPickedUp = true;
-            _lastInteractionTime = Time.time;
-
-            // Handle Collider
-            Collider col = GetComponent<Collider>();
-            if (col != null)
-            {
-                col.isTrigger = true; // Turn into trigger while equipped (or disable)
-                col.enabled = false;  // Disable to prevent self-collision
-            }
-
-            // Handle Rigidbody
-            Rigidbody rb = GetComponent<Rigidbody>();
-            if (rb != null)
-            {
-                rb.isKinematic = true;
-                rb.useGravity = false; // Disable gravity while holding
-            }
-
-            // Parent to the Mask-Root
-            transform.SetParent(_maskRoot);
-            Debug.Log($"Mask parented! Parent is now: {transform.parent?.name ?? "NULL"}");
-
-            // Reset local position and rotation
-            //transform.localPosition = Vector3.zero;
-            //transform.localRotation = Quaternion.identity;
-            transform.DOLocalJump(Vector3.zero, 1.25f, 0, 2).SetEase(Ease.InOutSine);
-            transform.DOLocalRotate(Vector3.zero, 2).SetEase(Ease.InOutSine);
-            transform.DOScale(Vector3.one * 2.75f, 2).SetEase(Ease.InOutSine); ;
-            Debug.Log("Mask picked up successfully!");
-        }
-        else
-        {
-            Debug.LogError("Mask-Root is not assigned in the inspector! Please assign it in the MaskPickup component.");
-        }
-    }
-
-    private void Drop()
-    {
-        _isPickedUp = false;
-        _currentInput = null;
-        _lastInteractionTime = Time.time;
-
-        transform.SetParent(null);
-        transform.localScale = _initialScale; // Restore scale in case parent distorted it
-
-        // Handle Collider
-        Collider col = GetComponent<Collider>();
-        if (col != null) 
-        {
-            col.enabled = true;
-            col.isTrigger = false; // Ensure it's solid to hit the ground
-        }
-
-        // Handle Rigidbody
-        Rigidbody rb = GetComponent<Rigidbody>();
-        if (rb != null)
-        {
-            rb.isKinematic = false;
-            rb.useGravity = true; // Ensure gravity is ON so it falls
-            rb.WakeUp();
-        }
-
-        Debug.Log("Mask dropped!");
     }
 }
