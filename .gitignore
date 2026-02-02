@@ -64,3 +64,6 @@ Thumbs.db
 # IDE specific
 .idea/
 .vscode/
+
+# Large Fbx files (MAPS)
+/Assets/Prefabs/Maps/*.fbx
