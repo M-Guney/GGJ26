@@ -263,137 +263,137 @@ ModelImporter:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: 01___Default_1001_normal
-    second: {fileID: 2800000, guid: cc14b5b0db24fd348b3c495f203cca4b, type: 3}
+    second: {fileID: 2800000, guid: fe126968a3b0daa438c301757e1bc1bf, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: 01___Default_1002_baseColor
-    second: {fileID: 2800000, guid: 9c6e7472315144245917308ec93e09c9, type: 3}
+    second: {fileID: 2800000, guid: ffee2da69a067d343893dedad2102ea5, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: 01___Default_1002_normal
-    second: {fileID: 2800000, guid: 51616f549310b0f42bc5643a52b95a56, type: 3}
+    second: {fileID: 2800000, guid: b44ea58a7ea96914c8d54f2616c02b45, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: 0_b6cb98dab10311efaf9760f262c0008f
-    second: {fileID: 2800000, guid: 6fca411600557c44b82fdebc9af50755, type: 3}
+    second: {fileID: 2800000, guid: 713ae30aa9fd4ac4db7a59f4f8412437, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: 0_b88cc270b10311efaf9760f262c0008f
-    second: {fileID: 2800000, guid: f03c63a98a4a91f4b85b0f79f0a62f09, type: 3}
+    second: {fileID: 2800000, guid: 6cb178e737cd6f94ba4359a2ab7cdd0e, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: 0_ba33013eb10311efaf9760f262c0008f
-    second: {fileID: 2800000, guid: 685db70f70c178e479b68a1d217e5e78, type: 3}
+    second: {fileID: 2800000, guid: 93a5e5c3b0a6f354f84dc515635a61cc, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: 0_c48c5784b10311efaf9760f262c0008f
-    second: {fileID: 2800000, guid: 79ac12f10c0b6f5418c1f8543a3c5cdd, type: 3}
+    second: {fileID: 2800000, guid: 52fd5f6fc2146a548b2c2ebd60aec9f1, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: 3DModel_Custom
-    second: {fileID: 2800000, guid: ab9454e6180e9bd469485aa5d74a1637, type: 3}
+    second: {fileID: 2800000, guid: 1cca8dbf8e33efe4293d7227e50adc71, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: 3DModel_Custom_Roughness
-    second: {fileID: 2800000, guid: 8321a1293a54cd64c9744b9b1951cd27, type: 3}
+    second: {fileID: 2800000, guid: 4b2a7dffa59f86b48811eb0f3e692727, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Ch17_1001_Glossiness
-    second: {fileID: 2800000, guid: 47f8f9f8eaaa2d54a9d15788779f1b0d, type: 3}
+    second: {fileID: 2800000, guid: 906d7a1c0c4f36642bcc5622fd19d960, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Ch17_1001_Normal
-    second: {fileID: 2800000, guid: 37481eef3ca09ee4cbb56b51a74a188f, type: 3}
+    second: {fileID: 2800000, guid: 6c4d0adde270964469ab48074d9d2f7e, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Ch17_1002_Diffuse
-    second: {fileID: 2800000, guid: c27c9d04c6c3a5647a90e2182532b336, type: 3}
+    second: {fileID: 2800000, guid: 85b6e760309b3744eafa11ee4401ea16, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Ch17_1002_Normal
-    second: {fileID: 2800000, guid: 0f6d25b6a4f0aca4fae4d77ab8bdb3a5, type: 3}
+    second: {fileID: 2800000, guid: 8b643222e514ae548afd023afaf174ba, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Hat_Base_Color
-    second: {fileID: 2800000, guid: e2b0f411fa878bf47bad25c940e158a4, type: 3}
+    second: {fileID: 2800000, guid: ffe0ff6de3e717d48bedacf46584d211, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Hat_Metallic
-    second: {fileID: 2800000, guid: 9a055d1ec1953174795d1ddbb9c196c2, type: 3}
+    second: {fileID: 2800000, guid: 7b6aa8115ddd35c46b6a29311ede3947, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Hat_Roughness
-    second: {fileID: 2800000, guid: 4856013de36db8d4da4449889fdca13a, type: 3}
+    second: {fileID: 2800000, guid: c1f9a5592dde91348a5d68cf4f65ca1a, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: ML_HumanSkull_Diffuse
-    second: {fileID: 2800000, guid: 2d1bc7a33da1b124e93177b2dc7c9dc9, type: 3}
+    second: {fileID: 2800000, guid: b9cd1acfdc06c054d8dc104cdb1aab8f, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: ML_HumanSkull_Normal
-    second: {fileID: 2800000, guid: 6f602a02219f359438064ccd19852865, type: 3}
+    second: {fileID: 2800000, guid: a028138598432084d8238dda9e49b29a, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: ML_HumanSkull_Roughness
-    second: {fileID: 2800000, guid: b0c0c63a0bc7a72448f6f5e725acb3bf, type: 3}
+    second: {fileID: 2800000, guid: 2e1a590bb36fe5f4bb4a9fa22873968e, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: PX_Soil_Ground_26_albedo
-    second: {fileID: 2800000, guid: 7ae2374684bfd9f46ad7ecad9a81dd97, type: 3}
+    second: {fileID: 2800000, guid: a63ad0cf8a216634ea2620a4e795d31c, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: PX_Soil_Ground_26_normal
-    second: {fileID: 2800000, guid: 9b2008dcfc62579469a2230e92638c78, type: 3}
+    second: {fileID: 2800000, guid: 78275d70db4e7964ea31f602e4b29bb5, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: PX_Soil_Ground_26_roughness
-    second: {fileID: 2800000, guid: 9588da44329a2bb42bdf7968e8a8293d, type: 3}
+    second: {fileID: 2800000, guid: 08534345f671c494083c39ccb6ec3141, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Rocks_Stylized_Color
-    second: {fileID: 2800000, guid: f90d3207f80c940488e739a2a86c7d99, type: 3}
+    second: {fileID: 2800000, guid: 9a68bab5702b33c4cbde57b9346c1ea1, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: jerrycan_jerrycan_BaseColor
-    second: {fileID: 2800000, guid: 9bb9c8bd117c99140b06afc87d4adf70, type: 3}
+    second: {fileID: 2800000, guid: 02901e48dc2e2b94d9498203bf07c3c6, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: radyobase
-    second: {fileID: 2800000, guid: c8fdb86ddf42b4943a409d9316ca3fd8, type: 3}
+    second: {fileID: 2800000, guid: a66552937e8b65d4698fba231b7412aa, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: volvo_logo
-    second: {fileID: 2800000, guid: 6c1e67c33c0492d43b2d32a0ce4c514e, type: 3}
+    second: {fileID: 2800000, guid: 1287e3535bcc7854abf26e4ffab0f143, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: yelek
-    second: {fileID: 2800000, guid: aa73e00cd59e1584db4a9a6a173b7335, type: 3}
+    second: {fileID: 2800000, guid: 347d581efb7f5aa48bea9fc1f293fe64, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
