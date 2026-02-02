@@ -65,5 +65,7 @@ Thumbs.db
 .idea/
 .vscode/
 
-# Large Fbx files (MAPS)
-/Assets/Prefabs/Maps/*.fbx
+# Large Fbx files (MAPS) # Ignore all FBX files in Maps and subfolders
+/Assets/Prefabs/Maps/**/*.fbx
+Assets/Prefabs/Maps/Map2/level2.fbx
+Assets/Prefabs/Maps/Levels/level1.fbx
