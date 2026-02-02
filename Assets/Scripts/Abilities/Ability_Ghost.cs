@@ -39,9 +39,8 @@ namespace GGJ26.Abilities
             // Optional: Visual feedback (Semi-transparent)
             // This is complex depending on materials, but we can try a simple keyword toggle or color change if supported.
             // For now, relies on the VFX spawned by base MaskAbility.
-
             yield return new WaitForSeconds(duration);
-
+ 
             // 2. Revert
             user.tag = _originalTag;
             Debug.Log($"Ghost Mode Ended. Tag reverted to '{_originalTag}'.");
