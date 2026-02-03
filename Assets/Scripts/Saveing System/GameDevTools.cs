@@ -1,16 +1,17 @@
 using UnityEngine;
-using UnityEngine.SceneManagement; // Sahneyi yeniden yüklemek için şart
+using UnityEngine.SceneManagement; // Sahneyi yeniden yÃ¼klemek iÃ§in Ã¾art
+using UnityEngine.InputSystem;
 
 public class GameDevTools : MonoBehaviour
 {
     void Update()
     {
-        // Klavyeden 'R' tuşuna basılınca çalışır
-        if (Input.GetKeyDown(KeyCode.R))
+        // Klavyeden 'R' tuÃ¾una basÃ½lÃ½nca Ã§alÃ½Ã¾Ã½r
+        if (Keyboard.current != null && Keyboard.current.rKey.wasPressedThisFrame)
         {
-            Debug.Log("R'ye basıldı! Sahne başa sarılıyor...");
+            Debug.Log("R'ye basÃ½ldÃ½! Sahne baÃ¾a sarÃ½lÃ½yor...");
 
-            // Şu an açık olan sahneyi (Leveli) kapatıp aynısını baştan açar
+            // Ãu an aÃ§Ã½k olan sahneyi (Leveli) kapatÃ½p aynÃ½sÃ½nÃ½ baÃ¾tan aÃ§ar
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }

@@ -14,18 +14,19 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private float _animationSpeedMultiplier = 1f;
     
     private NavMeshAgent agent;
+    [SerializeField] GameObject player;
     private Transform playerTarget;
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        
+        playerTarget = player.transform;
         // Auto-get animator if not assigned
         if (_animator == null)
             _animator = GetComponentInChildren<Animator>();
         
-        GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
-        if (playerObj != null) playerTarget = playerObj.transform;
+        //GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+        //if (playerObj != null) playerTarget = playerObj.transform;
     }
 
     void Update()
@@ -74,9 +75,10 @@ public class EnemyController : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("OYUNCU YAKALANDI VE YOK OLDU!");
-
-            // Oyuncuyu sahneden siler
-            Destroy(collision.gameObject);
+            // Stop chasing
+            //playerTarget = null;
+            //agent.ResetPath();
+            player.GetComponent<StarterAssets.ThirdPersonController>().enabled = false;
         }
     }
 }
